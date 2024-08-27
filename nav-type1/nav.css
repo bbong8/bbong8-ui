@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+
+  cursor: default;
+}
+
+p {
+  margin: 0;
+}
+
+.nav__wrapper {
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: white;
+  width: 100%;
+
+  padding: 5px 10%;
+}
+
+.nav__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+}
+
+.divider {
+  height: 30px;
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 20px;
+}
+
+.nav__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+
+.nav__menu-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0;
+  padding-top: 2px;
+
+  list-style: none;
+
+  width: 100%;
+}
+
+.nav__menu-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+
+  font-weight: 400;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-underline {
+  width: 0;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #379639;
+  transition: 0.3s ease-in-out;
+}
+
+.nav__menu-item:hover .item-underline {
+  width: 105%;
+}
+
+.text-star {
+  opacity: 0;
+  padding-top: 1px;
+  font-size: 12px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav__menu-item:hover .text-star {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+
+.nav__login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 12%;
+
+  color: #fff;
+  font-size: 14px;
+  text-align: end;
+
+  padding: 3px 0 1px 0;
+  border-radius: 20px;
+
+  background-color: #6b9637;
+
+  cursor: pointer;
+
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes loginRotate {
+  /* 애니메이션 */
+  0% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.nav__login:hover {
+  animation: loginRotate 0.5s ease-in-out;
+}
